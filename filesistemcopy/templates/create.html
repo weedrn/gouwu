@@ -1,0 +1,26 @@
+<html>
+    <head>
+      <!-- <link rel="stylesheet" href="styles.css"> -->
+    </head>
+    <body>
+<div class="topnav">
+  <a  href="/templates/index.html">Home</a>
+  <a class="active" href="/create">Create</a>
+  <a href="/templates/edit.html">Edit</a>
+  <a href="/templates/search.html">Search</a>
+</div>
+
+<form action="/create" method="POST">
+  <label for="item">Item:</label><br>
+  <input type="text" id="nameID" name="name"><br>
+  <label for="priceID">Content:</label><br>
+  <input type="text" id="priceID" name="content"><br>
+  <label for="descrID">Tags (odvojite ih space-om):</label><br>
+  <input type="text" id="descrID" name="tags"><br>
+  <input type="submit" value="Dodaj">
+</form>
+
+<br><br><br>
+<a href="/search">Pretrazi</a>
+    </body>
+</html>

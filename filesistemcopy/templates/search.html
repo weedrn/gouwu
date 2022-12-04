@@ -1,0 +1,33 @@
+<html>
+    <head>
+      <!-- <link rel="stylesheet" href="styles.css"> -->
+    </head>
+    <body>
+<div class="topnav">
+  <a href="./templates/index.html">Home</a>
+  <a href="/create">Create</a>
+  <a href="./templates/edit.html">Edit</a>
+  <a class="active" href="./templates/search.html">Search</a>
+</div>
+
+<form action="/read" method="POST">
+  <label for="item"> Tag:</label><br>
+  <input type="text" name="tag"><br>
+  <input type="submit" value="Search">
+</form>
+
+{{range .}}
+  <ul>
+    <li>Name: {{.Name}}</li>
+    <li>Content: {{.Content}}</li>
+    <a href="/edit/?Index={{.Index}}">Edit</a>
+    <a href="/delete/?Index={{.Index}}">Delete</a>
+  </ul>
+{{end}}
+<a href="/create">create</a>
+
+</body>
+</html>
+        
+    </body>
+</html>
